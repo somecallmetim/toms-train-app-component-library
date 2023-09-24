@@ -25,7 +25,7 @@ function FormComponent({ formComponent }) {
 
   return (
     <>
-      <div>{renderedFormComponent}</div>
+      <div className="displayBoxForFormComponents">{renderedFormComponent}</div>
     </>
   );
 }
