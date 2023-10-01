@@ -6,8 +6,10 @@ function RangeSlider() {
   const sliderMax = 100;
 
   function onInput(e) {
-    setSliderValue((e.target.value / sliderMax)*100);
+    setSliderValue(e.target.value);
   }
+
+  const sliderValuePercentage = (sliderValue / sliderMax)*100;
 
   return (
     <>
@@ -18,9 +20,8 @@ function RangeSlider() {
         min={0}
         max={sliderMax}
         style={{
-          background: `linear-gradient(to right, #8b4513 ${sliderValue}%, #ccc ${sliderValue}%)`,
+          background: `linear-gradient(to right, #8b4513 ${sliderValuePercentage}%, #ccc ${sliderValuePercentage}%)`,
           '--thumb-rotate': `${(sliderValue/100)*2160}deg`,
-
         }}
         onInput={onInput}
         value={sliderValue}
