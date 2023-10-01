@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
 import CheckboxExample from "../components/CheckboxExample";
-import Radio from "../components/Radio";
+import RadioAreaExample from "../components/RadioAreaExample";
 import Range from "../components/Range";
 import Reset from "../components/Reset";
 
@@ -11,7 +11,7 @@ function FormComponent({ formComponent }) {
       case "checkbox":
         return <CheckboxExample />;
       case "radio":
-        return <Radio />;
+        return <RadioAreaExample />;
       case "range":
         return <Range />;
       case "reset":
