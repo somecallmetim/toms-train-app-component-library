@@ -1,8 +1,21 @@
-function Checkbox() {
+/* eslint-disable react/prop-types */
+function Checkbox({ checkbox }) {
+
   return (
-    <div className="formBox">
-      <input style={{marginLeft: "-10px", verticalAlign: "middle"}} type="checkbox" name="test" id="test" />
-      <label style={{paddingLeft: "5px", verticalAlign: "middle"}} htmlFor="test">I am a checkbox</label>
+    <div>
+      <input
+        style={{ marginLeft: "-10px", verticalAlign: "middle" }}
+        type="checkbox"
+        name={checkbox.name}
+        id={checkbox.id}
+        onChange={checkbox.function}
+      />
+      <label
+        style={{ paddingLeft: "5px", verticalAlign: "middle" }}
+        htmlFor="test"
+      >
+        {checkbox.text}
+      </label>
     </div>
   );
 }
