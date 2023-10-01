@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 function MainNavbar() {
-  const componentLinks = ["checkbox", "radio", "reset", "range"];
+  const componentLinks = ["button", "checkbox", "radio", "range"];
   let id = 0;
   return (
     <div>
@@ -10,6 +10,7 @@ function MainNavbar() {
           listStyleType: "none",
           display: "flex",
           justifyContent: "space-around",
+          fontSize: "18px"
         }}
       >
         <li>

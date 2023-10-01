@@ -1,21 +1,22 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
+import ButtonExample from "../components/ButtonExample";
 import CheckboxExample from "../components/CheckboxExample";
 import RadioAreaExample from "../components/RadioAreaExample";
 import Range from "../components/Range";
-import Reset from "../components/Reset";
+
 
 function FormComponent({ formComponent }) {
   function componentBuilder(testvar) {
     switch (testvar) {
+      case "button":
+        return <ButtonExample />;
       case "checkbox":
         return <CheckboxExample />;
       case "radio":
         return <RadioAreaExample />;
       case "range":
         return <Range />;
-      case "reset":
-        return <Reset />;
       default:
         break;
     }

@@ -9,6 +9,10 @@ function App() {
       <MainNavbar />
       <Routes>
         <Route
+          path="/button"
+          element={<FormComponent formComponent={"button"} />}
+        />
+        <Route
           path="/checkbox"
           element={<FormComponent formComponent={"checkbox"} />}
         />
@@ -19,10 +23,6 @@ function App() {
         <Route
           path="/range"
           element={<FormComponent formComponent={"range"} />}
-        />
-        <Route
-          path="/reset"
-          element={<FormComponent formComponent={"reset"} />}
         />
         <Route path="/" element={<Homepage />} />
       </Routes>
