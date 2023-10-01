@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 function MainNavbar() {
-  const componentLinks = ["button", "checkbox", "radio", "range"];
+  const componentLinks = ["button", "checkbox", "radio", "rangeSlider"];
   let id = 0;
   return (
     <div>

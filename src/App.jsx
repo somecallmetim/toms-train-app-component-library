@@ -21,8 +21,8 @@ function App() {
           element={<FormComponent formComponent={"radio"} />}
         />
         <Route
-          path="/range"
-          element={<FormComponent formComponent={"range"} />}
+          path="/rangeSlider"
+          element={<FormComponent formComponent={"rangeSlider"} />}
         />
         <Route path="/" element={<Homepage />} />
       </Routes>

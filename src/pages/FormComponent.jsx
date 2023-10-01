@@ -3,7 +3,7 @@
 import ButtonExample from "../components/ButtonExample";
 import CheckboxExample from "../components/CheckboxExample";
 import RadioAreaExample from "../components/RadioAreaExample";
-import Range from "../components/Range";
+import RangeSliderExample from "../components/RangeSliderExample";
 
 
 function FormComponent({ formComponent }) {
@@ -15,8 +15,8 @@ function FormComponent({ formComponent }) {
         return <CheckboxExample />;
       case "radio":
         return <RadioAreaExample />;
-      case "range":
-        return <Range />;
+      case "rangeSlider":
+        return <RangeSliderExample />;
       default:
         break;
     }
