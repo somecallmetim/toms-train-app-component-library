@@ -19,11 +19,13 @@ function RangeSlider() {
         max={sliderMax}
         style={{
           background: `linear-gradient(to right, #8b4513 ${sliderValue}%, #ccc ${sliderValue}%)`,
-          '--thumb-rotate': `${(sliderValue/100)*2160}deg`
+          '--thumb-rotate': `${(sliderValue/100)*2160}deg`,
+
         }}
         onInput={onInput}
         value={sliderValue}
       />
+      <span style={{marginLeft: "15px",marginTop: "-3px", fontSize: "20px"}}>{Math.ceil(sliderValue)}</span>
     </>
   );
 }
