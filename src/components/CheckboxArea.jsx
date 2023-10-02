@@ -1,13 +1,14 @@
 import Checkbox from "./Checkbox";
 
 /* eslint-disable react/prop-types */
-function CheckboxArea({ arrayOfCheckboxes }) {
+function CheckboxArea({ arrayOfCheckboxes, formAreaName }) {
   return (
-    <div className="formBox">
+    <fieldset className="formBox">
+      <legend>{formAreaName}</legend>
       {arrayOfCheckboxes.map((checkbox) => (
         <Checkbox key={checkbox.id} checkbox={checkbox} />
       ))}
-    </div>
+    </fieldset>
   );
 }
 

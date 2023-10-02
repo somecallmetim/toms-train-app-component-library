@@ -1,18 +1,18 @@
 import CheckboxArea from "./CheckboxArea";
 
 function functionOne(e) {
-  if(e.target.checked){
-    window.alert("one checked")
+  if (e.target.checked) {
+    window.alert("one checked");
   } else {
-    window.alert("one unchecked")
+    window.alert("one unchecked");
   }
 }
 
 function functionTwo(e) {
-  if(e.target.checked){
-    window.alert("two checked")
+  if (e.target.checked) {
+    window.alert("two checked");
   } else {
-    window.alert("two unchecked")
+    window.alert("two unchecked");
   }
 }
 
@@ -31,7 +31,12 @@ function CheckboxExample() {
     function: functionTwo,
   };
 
-  return <CheckboxArea arrayOfCheckboxes={[checkbox1, checkbox2]}/>;
+  return (
+    <CheckboxArea
+      arrayOfCheckboxes={[checkbox1, checkbox2]}
+      formAreaName={"Norman Clark's Checkboxes"}
+    />
+  );
 }
 
 export default CheckboxExample;
