@@ -41,6 +41,15 @@ a {
   cursor: pointer;
 }
 
+.controlBoxWithBorder {
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid;
+  border-color: #8b4513; /* saddle brown */
+  padding: 10px 10px;
+}
+
 .displayBoxForFormComponents {
   display: flex;
   justify-content: center;
