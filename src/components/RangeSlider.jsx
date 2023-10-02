@@ -8,6 +8,7 @@ function RangeSlider({
   sliderMax = 100,
   initialSliderValue = 0,
   onInputFunction,
+  formAreaName
 }) {
   const [sliderValue, setSliderValue] = useState(initialSliderValue);
 
@@ -19,7 +20,8 @@ function RangeSlider({
   const sliderValuePercentage = (sliderValue / sliderMax) * 100;
 
   return (
-    <>
+    <fieldset className="formBox" style={{display: "flex", height: "100px", alignItems: "center"}}>
+      <legend>{formAreaName}</legend>
       <input
         type="range"
         name={name}
@@ -43,7 +45,7 @@ function RangeSlider({
       >
         {Math.ceil(sliderValue)}
       </span>
-    </>
+    </fieldset>
   );
 }
 

@@ -47,6 +47,11 @@ a {
   margin-top: 100px;
 }
 
+.rangeSliderBox {
+  display: flex;
+  align-items: center;
+}
+
 .btn {
   background-color: white; /* Denim Blue */
   border-radius: 5px;
