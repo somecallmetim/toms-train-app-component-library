@@ -1,12 +1,19 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 
-function RangeSlider() {
-  const [sliderValue, setSliderValue] = useState(0);
-
-  const sliderMax = 100;
+function RangeSlider({
+  name,
+  id,
+  sliderMin = 0,
+  sliderMax = 100,
+  initialSliderValue = 0,
+  onInputFunction,
+}) {
+  const [sliderValue, setSliderValue] = useState(initialSliderValue);
 
   function onInput(e) {
     setSliderValue(e.target.value);
+    onInputFunction(e.target.value);
   }
 
   const sliderValuePercentage = (sliderValue / sliderMax) * 100;
@@ -15,9 +22,9 @@ function RangeSlider() {
     <>
       <input
         type="range"
-        name="test"
-        id="range"
-        min={0}
+        name={name}
+        id={id}
+        min={sliderMin}
         max={sliderMax}
         style={{
           background: `linear-gradient(to right, #8b4513 ${sliderValuePercentage}%, #ccc ${sliderValuePercentage}%)`,
@@ -26,7 +33,14 @@ function RangeSlider() {
         onInput={onInput}
         value={sliderValue}
       />
-      <span style={{ marginLeft: "15px", marginTop: "-3px", fontSize: "20px", width:"35px" }}>
+      <span
+        style={{
+          marginLeft: "15px",
+          marginTop: "-3px",
+          fontSize: "20px",
+          width: "35px",
+        }}
+      >
         {Math.ceil(sliderValue)}
       </span>
     </>
