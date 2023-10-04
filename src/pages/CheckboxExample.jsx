@@ -1,22 +1,23 @@
-import CheckboxArea from "../components/Checkbox/CheckboxArea";
-
-function functionOne(e) {
-  if (e.target.checked) {
-    window.alert("one checked");
-  } else {
-    window.alert("one unchecked");
-  }
-}
-
-function functionTwo(e) {
-  if (e.target.checked) {
-    window.alert("two checked");
-  } else {
-    window.alert("two unchecked");
-  }
-}
+import ControlAreaBuilder from "../components/ControlAreaBuilder";
 
 function CheckboxExample() {
+
+  function functionOne(e) {
+    if (e.target.checked) {
+      window.alert("one checked");
+    } else {
+      window.alert("one unchecked");
+    }
+  }
+  
+  function functionTwo(e) {
+    if (e.target.checked) {
+      window.alert("two checked");
+    } else {
+      window.alert("two unchecked");
+    }
+  }
+
   const checkbox1 = {
     name: "test1",
     id: "test1",
@@ -31,11 +32,11 @@ function CheckboxExample() {
     function: functionTwo,
   };
 
+  const childProps = { arrayOfCheckboxes: [checkbox1, checkbox2] }
+  const legend = "Norman Clark's Checkboxes"
+
   return (
-    <CheckboxArea
-      arrayOfCheckboxes={[checkbox1, checkbox2]}
-      formAreaName={"Norman Clark's Checkboxes"}
-    />
+    <ControlAreaBuilder controlComponentType={"checkboxArea"} legend={legend} displayBorder={true} childProps={childProps}  />
   );
 }
 

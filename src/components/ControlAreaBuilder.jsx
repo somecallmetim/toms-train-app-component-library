@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
 import Button from "./Button/Button";
-import CheckboxExample from "../pages/CheckboxExample";
+import Checkbox from "./Checkbox/Checkbox";
 import RadioAreaExample from "../pages/RadioAreaExample";
 import RangeSliderExample from "../pages/RangeSliderExample";
 
@@ -10,15 +10,18 @@ function ControlAreaBuilder({
   controlComponentType,
   legend = "",
   displayBorder = false,
-  childProps
+  childProps,
 }) {
   function componentBuilder(controlComponentType) {
     switch (controlComponentType) {
       case "button":
-        const {name, onClickFunction} = childProps;
+        const { name, onClickFunction } = childProps;
         return <Button name={name} onClickFunction={onClickFunction} />;
-      case "checkbox":
-        return <CheckboxExample />;
+      case "checkboxArea":
+        const { arrayOfCheckboxes } = childProps;
+        return arrayOfCheckboxes.map((checkbox) => (
+          <Checkbox key={checkbox.id} checkbox={checkbox} />
+        ));
       case "radio":
         return <RadioAreaExample />;
       case "rangeSlider":
@@ -39,7 +42,7 @@ function ControlAreaBuilder({
             {controlComponentToRender}
           </fieldset>
         ) : (
-         controlComponentToRender 
+          controlComponentToRender
         )}
       </div>
     </>

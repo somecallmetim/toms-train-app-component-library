@@ -3,6 +3,7 @@ import Homepage from "./pages/Homepage";
 import ControlAreaBuilder from "./components/ControlAreaBuilder";
 import MainNavbar from "./components/MainNavbar";
 import ButtonExample from "./pages/ButtonExample";
+import CheckboxExample from "./pages/CheckboxExample";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         />
         <Route
           path="/checkbox"
-          element={<ControlAreaBuilder controlComponentType={"checkbox"} />}
+          element={<CheckboxExample />}
         />
         <Route
           path="/radio"
