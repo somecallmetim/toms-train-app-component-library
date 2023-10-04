@@ -1,4 +1,4 @@
-import RadioArea from "./RadioArea";
+import RadioArea from "../components/RadioButtons/RadioArea";
 
 function RadioAreaExample() {
   function printRadioButtonClicked(e) {

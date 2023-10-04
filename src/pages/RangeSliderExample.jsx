@@ -1,4 +1,4 @@
-import RangeSlider from "./RangeSlider";
+import RangeSlider from "../components/RangeSlider/RangeSlider";
 
 function RangeSliderExample() {
   const onInputFunction = (sliderValue) => {

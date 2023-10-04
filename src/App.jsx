@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import ControlAreaBuilder from "./components/ControlAreaBuilder";
 import MainNavbar from "./components/MainNavbar";
+import ButtonExample from "./pages/ButtonExample";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         />
         <Route
           path="/button"
-          element={<ControlAreaBuilder controlComponentType={"button"} />}
+          element={<ButtonExample />}
         />
         <Route
           path="/checkbox"

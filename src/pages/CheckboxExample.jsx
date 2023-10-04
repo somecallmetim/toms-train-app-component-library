@@ -1,4 +1,4 @@
-import CheckboxArea from "./CheckboxArea";
+import CheckboxArea from "../components/Checkbox/CheckboxArea";
 
 function functionOne(e) {
   if (e.target.checked) {

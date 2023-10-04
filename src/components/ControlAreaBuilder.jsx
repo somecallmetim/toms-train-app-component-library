@@ -1,19 +1,22 @@
+/* eslint-disable no-case-declarations */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
-import ButtonExample from "./ButtonExample";
-import CheckboxExample from "./CheckboxExample";
-import RadioAreaExample from "./RadioAreaExample";
-import RangeSliderExample from "./RangeSliderExample";
+import Button from "./Button/Button";
+import CheckboxExample from "../pages/CheckboxExample";
+import RadioAreaExample from "../pages/RadioAreaExample";
+import RangeSliderExample from "../pages/RangeSliderExample";
 
 function ControlAreaBuilder({
   controlComponentType,
   legend = "",
   displayBorder = false,
+  childProps
 }) {
-  function componentBuilder(testvar) {
-    switch (testvar) {
+  function componentBuilder(controlComponentType) {
+    switch (controlComponentType) {
       case "button":
-        return <ButtonExample />;
+        const {name, onClickFunction} = childProps;
+        return <Button name={name} onClickFunction={onClickFunction} />;
       case "checkbox":
         return <CheckboxExample />;
       case "radio":
