@@ -1,4 +1,4 @@
-import RadioArea from "../components/RadioButtons/RadioArea";
+import ControlAreaBuilder from "../components/ControlAreaBuilder";
 
 function RadioAreaExample() {
   function printRadioButtonClicked(e) {
@@ -24,11 +24,18 @@ function RadioAreaExample() {
       function: printRadioButtonClicked,
     },
   ];
+
+  const childProps = {
+    name: "engine selector",
+    listOfRadioButtons: listOfRadioButtons,
+  };
+
   return (
-    <RadioArea
+    <ControlAreaBuilder
+      controlComponentType={"radio"}
       legend={"Select an Engine"}
-      name={"engine selector"}
-      listOfRadioButtons={listOfRadioButtons}
+      displayBorder={true}
+      childProps={childProps}
     />
   );
 }

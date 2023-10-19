@@ -4,6 +4,7 @@ import ControlAreaBuilder from "./components/ControlAreaBuilder";
 import MainNavbar from "./components/MainNavbar";
 import ButtonExample from "./pages/ButtonExample";
 import CheckboxExample from "./pages/CheckboxExample";
+import RadioAreaExample from "./pages/RadioAreaExample";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         />
         <Route
           path="/radio"
-          element={<ControlAreaBuilder controlComponentType={"radio"} />}
+          element={<RadioAreaExample />}
         />
         <Route
           path="/rangeSlider"

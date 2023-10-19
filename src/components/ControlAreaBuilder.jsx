@@ -3,8 +3,8 @@
 /* eslint-disable no-undef */
 import Button from "./Button/Button";
 import Checkbox from "./Checkbox/Checkbox";
-import RadioAreaExample from "../pages/RadioAreaExample";
 import RangeSliderExample from "../pages/RangeSliderExample";
+import RadioArea from "./RadioButtons/RadioArea";
 
 function ControlAreaBuilder({
   controlComponentType,
@@ -23,7 +23,8 @@ function ControlAreaBuilder({
           <Checkbox key={checkbox.id} checkbox={checkbox} />
         ));
       case "radio":
-        return <RadioAreaExample />;
+        const { name: radioName, listOfRadioButtons } = childProps;
+        return <RadioArea legend={legend} name={radioName} listOfRadioButtons={listOfRadioButtons} />;
       case "rangeSlider":
         return <RangeSliderExample />;
       default:
